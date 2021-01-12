@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+  <title>Frontend Mentor | Profile card component</title>
+
+  <style>
+   body 
+   {
+	background-color: hsl(185, 75%, 39%);
+	overflow: hidden;
+	font-family: 'Kumbh Sans', sans-serif;
+   }
+   .container
+   {
+	position: absolute;
+	background-color: white;
+	border-radius: 10px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 1;
+   }
+   #card 
+   {
+	   border-radius: 10px 10px 0 0;
+   }
+   .topcon
+   {
+	   position: relative;
+   }
+   #victor
+   {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		border: 5px solid white;
+		border-radius: 50%;
+		transform: translate(-50%,-50%);
+   }
+   .toppattern
+   {
+	   position: absolute;
+	   top:	-90%;
+	   left: -20%;
+   }
+   .bottompattern
+   {
+	   position: absolute;
+	   right: -20%;
+	   bottom: -90%
+   }
+   .col
+   {
+	   float: left;
+	   width: 33.3%;
+   }
+   @media only screen and (max-width:375px){
+	   .topcon p
+	   {
+		   font-size: 10px;
+	   }
+	   .bottom p
+	   {
+		   font-size: 10px;
+	   }
+	   .toppattern
+	   {
+		   position: absolute;
+		   width: 100%;
+		   top:	-10%;
+		   left: -50%;
+	   }
+	   .bottompattern
+	   {
+			position: absolute;
+			width: 100%;
+			right: -50%;
+			bottom: -10%;
+	   }
+   }
+  </style>
+</head>
+<body>
+	<img class="toppattern" src="images/bg-pattern-top.svg" width="70%">
+	<div class="container">	
+		<div class="topcon">
+			<div>
+			<img id="card" src="images/bg-pattern-card.svg" width="350px" height="100px">
+			</div>
+			<div class="pinfo" height="100px">
+			<p style="text-align:center; font-size:14px; margin-top:50px"> <b>Victor Crest</b> 26 </p>
+			<p style="text-align:center; font-size:14px; margin-bottom:0"> London </p>
+			</div>
+			<img id="victor" src="images/image-victor.jpg">
+		</div>	
+		<div class="bottom" style="border-top: 1px solid grey">
+			<div class="col">
+			<p style="text-align:center; font-size: 14px"><b>80K</b></p>
+			<p style="text-align:center; font-size: 14px">Followers</p>
+			</div>
+			<div class="col">
+			<p style="text-align:center; font-size: 14px"><b>803K</b></p>
+			<p style="text-align:center; font-size: 14px">Likes</p>
+			</div>
+			<div class="col">
+			<p style="text-align:center; font-size: 14px"><b>1.4K</b></p>
+			<p style="text-align:center; font-size: 14px">Photos</p>
+			</div>
+		</div>
+	</div>
+	<img class="bottompattern" src="images/bg-pattern-bottom.svg" width="70%">
+</body>
+</html>
